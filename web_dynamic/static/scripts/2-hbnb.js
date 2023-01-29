@@ -35,6 +35,7 @@ $(() => {
   });
 
   $.get(`${BASE_URL}/status`, (data, status) => {
+    log.console(status);
     if ((status === 'success') && (data.status === 'OK')) {
       if (!$('div#api_status').hasClass('available')) {
         $('div#api_status').addClass('available');
